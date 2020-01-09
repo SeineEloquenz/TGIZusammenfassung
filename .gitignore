@@ -22,4 +22,6 @@
 *.out
 *.synctex.gz
 *.thm
-!/.idea/workspace.xml
+.idea/workspace.xml
+out/
+auxil/
