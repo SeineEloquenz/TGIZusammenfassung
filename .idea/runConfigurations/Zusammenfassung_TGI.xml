@@ -1,0 +1,20 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Zusammenfassung_TGI" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+    <texify>
+      <compiler>LATEXMK</compiler>
+      <compiler-path />
+      <sumatra-path />
+      <viewer-command />
+      <compiler-arguments />
+      <main-file>$PROJECT_DIR$/src/Zusammenfassung_TGI.tex</main-file>
+      <aux-dir>true</aux-dir>
+      <out-dir>true</out-dir>
+      <compile-twice>false</compile-twice>
+      <output-format>PDF</output-format>
+      <has-been-run>true</has-been-run>
+      <bib-run-config />
+      <makeindex-run-config />
+    </texify>
+    <method v="2" />
+  </configuration>
+</component>
