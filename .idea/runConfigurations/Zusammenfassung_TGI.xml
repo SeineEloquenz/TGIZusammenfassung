@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Zusammenfassung_TGI" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
     <texify>
-      <compiler>XELATEX</compiler>
+      <compiler>LATEXMK</compiler>
       <compiler-path />
       <sumatra-path />
       <pdf-viewer>SUMATRA</pdf-viewer>

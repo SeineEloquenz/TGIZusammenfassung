@@ -13,11 +13,8 @@
 
 %Zum einfärben von Texten
 \usepackage[usenames,vipsnames,svgnames,table]{xcolor}
-%Zum erstellen des Index
-\usepackage{makeidx}
 \usepackage[colorlinks=false, pdfborder={0 0 0}]{hyperref}
-\makeindex
-%Tikz 
+%Tikz
 \usepackage{tikz}
 \usetikzlibrary{arrows,automata}
 %for \Set
@@ -70,17 +67,17 @@
         Bindend sind einzig und allein die offiziellen Vorlesungsunterlagen.
     }
 
-    \subsection{Alphabete\index{Alphabet} und Wörter\index{Wort}}
-	\label{subsec:alphabeteindexund-wörterindex}
+    \subsection{Alphabete und Wörter}
+	\label{subsec:alphabete-und-wörter}
 
     \begin{defi}[Definitionen zu Alphabeten und Wörtern]
         \begin{itemize}
             \item Ein Alphabet $\Sigma$ ist eine endliche Menge von Zeichen.
             \item Ein Wort w über $\Sigma$ ist eine (möglicherweise leere) Folge von Zeichen aus $\Sigma$.
-            \item Das leere Wort\index{leere Wort} wird mit $\epsilon$ symbolisiert.
+            \item Das leere Wort wird mit $\epsilon$ symbolisiert.
             \item Die Menge aller Wörter über $\Sigma$ wird mit $\Sigma^*$ abgekürzt.
             \item Die Menge aller Wörter der Länge $n$ über $\Sigma$ wird mit $\Sigma^n$ abgekürzt.
-            \item Die Konkatenation\index{Konkatenation} zweier Wörter $w_1$ und $w_2$ wird mit $w_1\cdot w_2$ oder $w_{1}w_{2}$ abgekürzt.
+            \item Die Konkatenation zweier Wörter $w_1$ und $w_2$ wird mit $w_1\cdot w_2$ oder $w_{1}w_{2}$ abgekürzt.
             \item Die iterierte Konkatenation eines Wortes $w$ bezeichnen wir mit $w^k\coloneqq \underbrace{w\cdot\dots\cdot w}_{k\text{ mal}}$
             \item Lässt sich $w$ als $w=t\cdot u\cdot v$, so heißt:
             $\left. \begin{array}{cc}
@@ -93,24 +90,24 @@
     \end{defi}
 
 
-    \subsection{Formale Sprachen\index{formale Sprachen}}
-	\label{subsec:formale-sprachenindex}
+    \subsection{Formale Sprachen}
+	\label{subsec:formale-sprachen}
 
     \begin{defi}[Definitionen zu formalen Sprachen]
         \begin{itemize}
             \item Eine formale Sprache $L$ über $\Sigma$ ist eine Teilmenge $L\subseteq\Sigma^*$
-            \item Die Produktsprache\index{Produktsprache} zweier Sprachen $L_1$ und $L_2$ definieren wir als\\ $L_1\cdot L_2\coloneqq\set{w_{1}w_{2}\mid w_{1}\in L_{1}\text{ und } w_{2}\in L_2}$
+            \item Die Produktsprache zweier Sprachen $L_1$ und $L_2$ definieren wir als\\ $L_1\cdot L_2\coloneqq\set{w_{1}w_{2}\mid w_{1}\in L_{1}\text{ und } w_{2}\in L_2}$
             \item Das Produkt von $L$ mit sich selbst wird als $L^k\coloneqq \underbrace{L\cdot\dots\cdot L}_{k\text{ mal}}$ bezeichnet. $L^0 = \set{\epsilon}$
-            \item Der Kleene'sche Abschluss\index{Kleene'scher Abschluss} ist definiert durch $L^*\coloneqq \bigcup\limits_{i\geq 0} L^i$
+            \item Der Kleene'sche Abschluss ist definiert durch $L^*\coloneqq \bigcup\limits_{i\geq 0} L^i$
             \item Der positive Kleene'sche Abschluss ist definiert durch $L^+\coloneqq \bigcup\limits_{i\geq 1} L^i$
-            \item Die Quotientensprache\index{Quotientensprache} bezeichnet $L_1/L_2\coloneqq\set{w\in \Sigma^*\mid\exists z\in L_2\text{ mit } w\cdot z\in L_1}$
-            \item Die Komplementsprachen\index{Komplementsprache} bezeichnet $L^c\coloneqq\Sigma^*\setminus L$
+            \item Die Quotientensprache bezeichnet $L_1/L_2\coloneqq\set{w\in \Sigma^*\mid\exists z\in L_2\text{ mit } w\cdot z\in L_1}$
+            \item Die Komplementsprachen bezeichnet $L^c\coloneqq\Sigma^*\setminus L$
         \end{itemize}
     \end{defi}
 
 
-    \subsection{Reguläre Sprachen\index{reguläre Sprache}}
-	\label{subsec:reguläre-sprachenindex}
+    \subsection{Reguläre Sprachen}
+	\label{subsec:reguläre-sprachen}
 
     \begin{defi}[Reguläre Sprache]
         Eine Sprache $L$ über $\Sigma$ heißt regulär, wenn sie auf folgende Weise produziert werden kann:
@@ -131,37 +128,37 @@
     \end{defi}
 
 
-    \subsection{Kontextfreie Sprachen\index{kontextfreie Sprache}}
-	\label{subsec:kontextfreie-sprachenindex}
+    \subsection{Kontextfreie Sprachen}
+	\label{subsec:kontextfreie-sprachen}
 
     \begin{defi}[Kontextfreie Grammatik]
-        Eine kontextfreie Grammatik\index{kontextfreie Grammatik} $G=(\Sigma ,V,S,R)$ ist gegeben durch:
+        Eine kontextfreie Grammatik $G=(\Sigma ,V,S,R)$ ist gegeben durch:
         \begin{itemize}
             \item ein endliches Alphabet $\Sigma$
-            \item eine endliche Menge $V$ mit $V\cap\Sigma = \set{}$ von \tcol{Nichtterminalsymbolen}\index{Nichtterminalsymbol}
-            \item ein \tcol{Startsymbol}\index{Startsymbol} $S\in V$
-            \item eine endliche menge von \tcol{Ableitungsregeln}\index{Ableitungsregel} $R$, d.h.\ eine Menge von Tupeln $(I,r)\in V\times (\Sigma\cup V)^*$
+            \item eine endliche Menge $V$ mit $V\cap\Sigma = \set{}$ von \tcol{Nichtterminalsymbolen}
+            \item ein \tcol{Startsymbol} $S\in V$
+            \item eine endliche menge von \tcol{Ableitungsregeln} $R$, d.h.\ eine Menge von Tupeln $(I,r)\in V\times (\Sigma\cup V)^*$
         \end{itemize}
         Wir schreiben auch $I\rightarrow r$. $L(G)\coloneqq \set{w\in\Sigma^*\mid S\rightarrow^*w}$ bezeichnet die von $G$ erzeugte Sprache.
     \end{defi}
 
 
 
-    \section{Endliche Automaten\index{endlicher Automat} und reguläre Ausdrücke\index{regulärer Ausdruck}}
-	\label{sec:endliche-automatenindexund-reguläre-ausdrückeindex}
+    \section{Endliche Automaten und reguläre Ausdrücke}
+	\label{sec:endliche-automaten-und-reguläre-ausdrücke}
 
 
-    \subsection{Deterministische endliche Automaten\index{deterministischer endlicher Automat}}
-	\label{subsec:deterministische-endliche-automatenindex}
+    \subsection{Deterministische endliche Automaten}
+	\label{subsec:deterministische-endliche-automaten}
 
     \begin{defi}[DEA]
         Ein (deterministischer) endlicher Automat $(Q,\Sigma ,\delta ,s,F)$ (D)EA besteht aus:
         \begin{itemize}
-            \item $Q$, einer endlichen Menge von \tcol{Zuständen}\index{Zustand}
-            \item $\Sigma$, einer endlichen Menge von \tcol{Eingabesymbolen}\index{Eingabealphabet}
+            \item $Q$, einer endlichen Menge von \tcol{Zuständen}
+            \item $\Sigma$, einer endlichen Menge von \tcol{Eingabesymbolen}
             \item $\delta\colon Q\times\Sigma\to Q$, einer \tcol{Übergangsfunktion}
-            \item $s\in Q$, eines \tcol{Startzustand}\index{Startzustand}
-            \item $F\subseteq Q$, einer Menge von \tcol{Endzuständen}\index{Endzustand}
+            \item $s\in Q$, eines \tcol{Startzustand}
+            \item $F\subseteq Q$, einer Menge von \tcol{Endzuständen}
         \end{itemize}
     \end{defi}
 
@@ -192,7 +189,7 @@
     \end{defi}
 
     \begin{satz}
-        Jede reguläre Sprache\index{reguläre Sprache} wird von einem (deterministischen) endlichen Automaten\index{endlicher Automat} akzeptiert.
+        Jede reguläre Sprache wird von einem (deterministischen) endlichen Automaten akzeptiert.
     \end{satz}
 
 
@@ -202,11 +199,11 @@
     \begin{defi}[NEA]
         Ein nichtdeterministischer endlicher Automat $(Q,\Sigma ,\delta ,s,F)$ NEA besteht aus:
         \begin{itemize}
-            \item $Q$, einer endlichen Menge von \tcol{Zuständen}\index{Zustand}
-            \item $\Sigma$, einer endlichen Menge von \tcol{Eingabesymbolen}\index{Eingabealphabet}
-            \item $\delta\colon Q\times (\Sigma\cup\set{\epsilon})\to 2^Q$, einer \tcol{Übergangsfunktion}, wobei $2^Q$ die Potenzmenge\index{Potenzmenge} von $Q$ darstellt
-            \item $s\in Q$, eines \tcol{Startzustand}\index{Startzustand}
-            \item $F\subseteq Q$, einer Menge von \tcol{Endzuständen}\index{Endzustand}
+            \item $Q$, einer endlichen Menge von \tcol{Zuständen}
+            \item $\Sigma$, einer endlichen Menge von \tcol{Eingabesymbolen}
+            \item $\delta\colon Q\times (\Sigma\cup\set{\epsilon})\to 2^Q$, einer \tcol{Übergangsfunktion}, wobei $2^Q$ die Potenzmenge von $Q$ darstellt
+            \item $s\in Q$, eines \tcol{Startzustand}
+            \item $F\subseteq Q$, einer Menge von \tcol{Endzuständen}
         \end{itemize}
     \end{defi}
 
@@ -215,17 +212,17 @@
     \end{defi}
 
     \begin{defi}
-        Zwei endliche Automaten heißen \tcol{äquivalent}\index{äquivalente Automaten}, wenn sie dieselbe Sprache akzeptieren.
+        Zwei endliche Automaten heißen \tcol{äquivalent}, wenn sie dieselbe Sprache akzeptieren.
     \end{defi}
 
     \begin{satz}[Äquivalenz von NEA's und DEA's]
         Zu jedem nichtdeterministischen endlichen Automaten gibt es einen äquivalenten deterministischen Automaten.
     \end{satz}
 
-    \begin{verf}[Potenzmengenkonstruktion\index{Potenzmengenkonstruktion}]
+    \begin{verf}[Potenzmengenkonstruktion]
         Wir konstruieren für jeden NEA $A\coloneqq (Q,\Sigma ,\delta ,s,F)$ Einen DEA $\tilde{A}\coloneqq (\tilde{Q},\Sigma ,\tilde{\delta},\tilde{s},\tilde{F})$ auf folgende Weise:
         \begin{itemize}
-            \item definieren für jeden Zustand $q\in Q$ den \tcol{$\epsilon$-Abschluss}\index{$\epsilon$-Abschluss} \[E(q)\coloneqq \set{p\in Q\mid p \text{ ist von } q \text{ durch } \epsilon\text{-Übergänge erreichbar}}\]
+            \item definieren für jeden Zustand $q\in Q$ den \tcol{$\epsilon$-Abschluss} \[E(q)\coloneqq \set{p\in Q\mid p \text{ ist von } q \text{ durch } \epsilon\text{-Übergänge erreichbar}}\]
             \item $\tilde{Q} = 2^Q$
             \item $\tilde{\delta}\colon\tilde{Q}\times\Sigma\to\tilde{Q}$ wobei $\tilde{\delta}(\tilde{q},a)$ die Menge an Zuständen ist, die der NEA, startend von einem Zustand aus $\tilde{q}$ aus nach abarbeiten von beliebig vielen $\epsilon$-Übergängen \tcol{und} dem Symbol $a$ erreichen kann.
             \item $\tilde{s}\coloneqq E(s)$
@@ -233,7 +230,7 @@
         \end{itemize}
     \end{verf}
 
-    \begin{satz}[NEA \tcol{ohne $\epsilon$-Übergänge}\index{$\epsilon$-Übergang}]
+    \begin{satz}[NEA \tcol{ohne $\epsilon$-Übergänge}]
         Zu jedem NEA mit $\epsilon$-Übergängen gibt es einen äquivalenten NEA ohne $\epsilon$-Übergänge, der nicht mehr Zustände hat.
     \end{satz}
 
@@ -249,10 +246,10 @@
     \end{verf}
 
     \begin{satz}
-        Jede Sprache, die von einem endlichen Automaten\index{endlicher Automat} erkannt wird, ist regulär\index{reguläre Sprache}.
+        Jede Sprache, die von einem endlichen Automaten erkannt wird, ist regulär.
     \end{satz}
 
-    \begin{verf}[Konstruktion eines regulären Ausdrucks\index{regulärer Ausdruck} aus einem DEA\index{deterministischer endlicher Automat}]
+    \begin{verf}[Konstruktion eines regulären Ausdrucks aus einem DEA]
         Wir betrachten folgende Menge:
         \[L_{q_r,i,q_t}\coloneqq\set{w\in\Sigma^*\mid\text{Abarbeitung von }w\text{ führt von }q_r\text{ nach }q_t\text{ und hat nur Zwischenzustände }\set{q_1,\dots ,q_i}}\]
         Nun betrachten wir:
@@ -266,38 +263,38 @@
         Damit ist dann auch $L_f=L_{s,n,f}$ regulär für jedes $f\in F$.
     \end{verf}
 
-    \begin{satz}[Pumping-Lemma für reguläre Sprachen\index{Pumping-Lemma für reguläre Sprachen}]
+    \begin{satz}[Pumping-Lemma für reguläre Sprachen]
         Sei $L$ eine reguläre Sprache.
         Dann existiert eine Zahl $n\in\mathbb{N}$, sodass für jedes Wort $w\in L$ mit $|w|>n$ eine Darstellung
         \[w=uvx \text{ mit } |uv|\leq n, v\neq\epsilon,\]
         existiert, bei der auch $uv^{i}x\in L$ ist für alle $i\in\mathbb{N}_0$.
     \end{satz}
 
-    \begin{satz}[Verallgemeinertes Pumping-Lemma für reguläre Sprachen\index{Pumping-Lemma für reguläre Sprachen}]
+    \begin{satz}[Verallgemeinertes Pumping-Lemma für reguläre Sprachen]
         Sei $L$ eine reguläre Sprache.
         Dann existiert eine Zahl $n\in\mathbb{N}$, sodass für jedes Wort $w\in L$ mit $|w|>n$ und jede Darstellung $w=tyx$ mit $|y|=n$ gilt:\\
         Für das Teilwort $y$ existiert eine Darstellung $y=uvz$ mit $v\neq\epsilon$ bei der auch $tuv^{i}zx\in L$ ist für alle $i\in\mathbb{N}_0$.
     \end{satz}
 
 
-    \subsection{Minimierung von Automaten\index{Minimierung von Automaten} und Äquivalenzklassenautomaten\index{Äquivalenzklassenautomaten}}
-	\label{subsec:minimierung-von-automatenindexund-äquivalenzklassenautomatenindex}
+    \subsection{Minimierung von Automaten und Äquivalenzklassenautomaten}
+	\label{subsec:minimierung-von-automaten-und-äquivalenzklassenautomaten}
 
-    \begin{defi}[Überflüssige Zustände\index{überflüssige Zustände}]
-        Zustände eines (deterministischen) endlichen Automaten\index{endlicher Automat}, die vom Anfangszustand aus nicht erreichbar sind, heißen \tcol{überflüssig}
+    \begin{defi}[Überflüssige Zustände]
+        Zustände eines (deterministischen) endlichen Automaten, die vom Anfangszustand aus nicht erreichbar sind, heißen \tcol{überflüssig}
     \end{defi}
 
     \begin{satz}
-        Die Menge aller \tcol{überflüssigen Zustände} eines (deterministischen) endlichen Automaten\index{endlicher Automat} kann in Zeit $O(|Q|\cdot |\Sigma)$ berechnet werden (\tcol{DFS}).
+        Die Menge aller \tcol{überflüssigen Zustände} eines (deterministischen) endlichen Automaten kann in Zeit $O(|Q|\cdot |\Sigma)$ berechnet werden (\tcol{DFS}).
     \end{satz}
 
-    \begin{defi}[Äquivalente Zustände\index{äquivalente Zustände}]
+    \begin{defi}[Äquivalente Zustände]
         Zwei Zustände $p$ und $q$ eines deterministischen endlichen Automaten heißen \tcol{äquivalent}$(p\equiv q)$, wenn für alle Wörter $w\in\Sigma^*$ gilt:
         \[\delta(p,w)\in F\Leftrightarrow\delta(q,w)\in F\]
         Mit $[q]$ bezeichnen wir die \tcol{Äquivalenzklasse} der zu $q$ äquivalenten Zustände.
     \end{defi}
 
-    \begin{verf}[Konstruktion des \tcol{Äquivalenzklasseautomaten}\index{Äquivalenzklasseautomat}]
+    \begin{verf}[Konstruktion des \tcol{Äquivalenzklasseautomaten}]
         Zu einem DEA $A=(Q,\Sigma,\delta ,s,F)$ definieren wir den Äquivalenzklassenautomaten $A^\equiv=(Q^\equiv ,\Sigma^\equiv ,\delta^\equiv ,s^\equiv ,F^\equiv)$ durch:
         \begin{itemize}
             \item $Q^\equiv\coloneqq\set{[q]\mid q\in Q}$
@@ -306,26 +303,26 @@
             \item $s^\equiv\coloneqq[s]$
             \item $F^\equiv\coloneqq\set{[f]\mid f\in F}$
         \end{itemize}
-        Um die Äquivalenzklassen zu bestimmen, unterteile $Q$ in immer kleinere Klassen von Zuständen, indem zuerst ein \tcol{Zeuge}\index{Zeuge} für die nichtäquivalenz zweier Zustände der Länge $0$, dann $1$, dann $2\dots$ gesucht wird.
+        Um die Äquivalenzklassen zu bestimmen, unterteile $Q$ in immer kleinere Klassen von Zuständen, indem zuerst ein \tcol{Zeuge} für die nichtäquivalenz zweier Zustände der Länge $0$, dann $1$, dann $2\dots$ gesucht wird.
         Das Verfahren bricht ab, wenn für Wörter der Länge $k$ keine Zeugen mehr gefunden werden.\\
         Die entstandenen Klassen sind die gesuchten \tcol{Äquivalenzklassen}.
     \end{verf}
 
     \begin{satz}
-        Der Äquivalenzklasseautomat\index{Äquivalenzklasseautomat} $A^\equiv$ zu $A$ akzeptiert dieselbe Sprache wie $A$.
+        Der Äquivalenzklasseautomat $A^\equiv$ zu $A$ akzeptiert dieselbe Sprache wie $A$.
     \end{satz}
 
     \begin{satz}
-        Der Äquivalenzklassenautomat\index{Äquivalenzklasseautomat} $A^\equiv$ zu $A$ ohne überflüssige Zustände ist \tcol{minimal}.
+        Der Äquivalenzklassenautomat $A^\equiv$ zu $A$ ohne überflüssige Zustände ist \tcol{minimal}.
     \end{satz}
 
-    \begin{defi}[Rechtsinvariante Äquivalenzrelation\index{rechtsinvariante Äquivalenzrelation}]
+    \begin{defi}[Rechtsinvariante Äquivalenzrelation]
         Eine Äquivalenzrelation $R$ über $\Sigma$ heißt \tcol{rechtsinvariant}, wenn für alle $x,y\in\Sigma^*$ gilt:
         \[\text{falls } x\ R\ y\text{ so gilt auch }xz\ R\ yz\text{ für alle } z\in\Sigma^*\]
         Der \tcol{Index} von $R$ $ind(R)$ ist die Anzahl der Äquivalenzklassen von $\Sigma^*$ bezüglich $R$.
     \end{defi}
 
-    \begin{defi}[Nerode-Relation\index{Nerode-Relation}]
+    \begin{defi}[Nerode-Relation]
         Für eine Sprache $L\subseteq\Sigma^*$ ist die \tcol{Nerode-Relation} $R_L$ definiert durch:\\
         für $x,y\in\Sigma^*$ ist $x\ R\ y$ genau dann, wenn $(xz\in L\Leftrightarrow yz\in L)$ für alle $z\in\Sigma^*$ gilt.\\
         Die Nerode-Relation ist offensichtlich \tcol{rechtsinvariant}.
@@ -342,14 +339,14 @@
 
 
 
-    \section{Turingmaschine\index{Turingmaschine} und Berechenbarkeit}
-	\label{sec:turingmaschineindexund-berechenbarkeit}
+    \section{Turingmaschine und Berechenbarkeit}
+	\label{sec:turingmaschine-und-berechenbarkeit}
 
 
-    \subsection{Die Turingmaschine\index{Turingmaschine}}
-	\label{subsec:die-turingmaschineindex}
+    \subsection{Die Turingmaschine}
+	\label{subsec:die-turingmaschine}
 
-    \begin{defi}[Turingmaschine\index{Turingmaschine}]
+    \begin{defi}[Turingmaschine]
         Eine deterministische \tcol{Turingmaschine} (DTM) besteht aus:
         \begin{itemize}
             \item $Q$, einer endlichen \tcol{Zustandsmenge}
@@ -380,19 +377,19 @@
         Ist für eine bestimmte Kombination $q,a$ kein Übergang angegeben, stoppt die TM in einem nicht akzeptierenden Zustand.
     \end{beis}
 
-    \begin{defi}[Definitionen zur Turingmaschine\index{Turingmaschine}]
+    \begin{defi}[Definitionen zur Turingmaschine]
         \begin{itemize}
-            \item Eine TM \tcol{akzeptiert}\index{Turingmaschine akzeptiert} eine Eingabe $w\in\Sigma^*$, wenn sie nach Lesen von $w$ in einem Zustand aus $F$ stoppt
+            \item Eine TM \tcol{akzeptiert} eine Eingabe $w\in\Sigma^*$, wenn sie nach Lesen von $w$ in einem Zustand aus $F$ stoppt
             \item Eine TM \tcol{akzeptiert} eine Sprache $L$ genau dann, wenn sie ausschließlich Wörter $w\in L$ als Eingabe akzeptiert.
-            \item Eine Sprache $L\subseteq\Sigma^*$ heißt \tcol{rekursiv}\index{rekursiv} oder \tcol{entscheidbar}\index{entscheidbar}, wenn es eine TM gibt, die auf allen Eingaben stopp und eine Eingabe $w$ genau dann akzeptiert, wenn $w\in L$ gilt
-            \item Eine Sprache $L\subseteq\Sigma^*$ heißt \tcol{rekursiv-aufzählbar}\index{rekursiv-aufzählbar} oder \tcol{semi-entscheidbar}\index{semi-entscheidbar}, wenn es eine TM gibt, die genau die Eingaben von $w$ akzeptiert für die $w\in L$.\\
+            \item Eine Sprache $L\subseteq\Sigma^*$ heißt \tcol{rekursiv} oder \tcol{entscheidbar}, wenn es eine TM gibt, die auf allen Eingaben stopp und eine Eingabe $w$ genau dann akzeptiert, wenn $w\in L$ gilt
+            \item Eine Sprache $L\subseteq\Sigma^*$ heißt \tcol{rekursiv-aufzählbar} oder \tcol{semi-entscheidbar}, wenn es eine TM gibt, die genau die Eingaben von $w$ akzeptiert für die $w\in L$.\\
             Das Verhalten der TM für Eingaben $w\notin L$ ist damit nicht definiert.
-            \item Eine Funktion $f\colon\Sigma^*\to\Gamma^*$ heißt \tcol{berechenbar}\index{berechenbar} oder \tcol{totalrekursiv}\index{totalrekursiv}, wenn es eine TM gibt, die bei Eingabe von $w\in\Sigma^*$ den Funktionswert $f(w)\in\Gamma^*$ ausgibt.
+            \item Eine Funktion $f\colon\Sigma^*\to\Gamma^*$ heißt \tcol{berechenbar} oder \tcol{totalrekursiv}, wenn es eine TM gibt, die bei Eingabe von $w\in\Sigma^*$ den Funktionswert $f(w)\in\Gamma^*$ ausgibt.
             \item Eine TM \tcol{realisiert} die Funktion $f\colon\Sigma^*\to\Gamma^*$, mit $f(w)=$ Ausgabe der TM, wenn sie stoppt und undefiniert sonst.
         \end{itemize}
     \end{defi}
 
-    Die \tcol{Church'sche These}\index{Church'sche These} besagt, dass die Menge der berechenbaren Funktionen genau die Menge der im intuitiven Sinne überhaupt berechenbaren Funktionen ist.\\
+    Die \tcol{Church'sche These} besagt, dass die Menge der berechenbaren Funktionen genau die Menge der im intuitiven Sinne überhaupt berechenbaren Funktionen ist.\\
 
     Es gibt verschiedene \tcol{Varianten} der TM, die alle gleich mächtig zur TM sind:
     \begin{itemize}
@@ -403,47 +400,47 @@
     \end{itemize}
 
 
-    \subsection{Die universelle Turingmaschine\index{universelle Turingmaschine} und unentscheidbare Probleme\index{Unentscheidbarkeit}}
-	\label{subsec:die-universelle-turingmaschineindexund-unentscheidbare-problemeindex}
+    \subsection{Die universelle Turingmaschine und unentscheidbare Probleme}
+	\label{subsec:die-universelle-turingmaschine-und-unentscheidbare-probleme}
 
-    \begin{defi}[Gödelnummer\index{Gödelnummer}]
+    \begin{defi}[Gödelnummer]
         Sei $M=(Q,\Sigma,\Gamma,\delta,s,F)$ eine Turingmaschine.
         Die \tcol{Gödelnummer} von $M$ wird mit $\langle M\rangle$ bezeichnet.
         Es gilt $\langle M\rangle\in\set{0,1}^*$ und $\langle M\rangle$ definiert $M$ vollständig.\\
         $T_w$ sei die TM, mit der Gödelnummer $w$, beziehungsweise die TM, die $\set{}$ akzeptiert.
     \end{defi}
 
-    \begin{defi}[universelle Turingmaschine\index{universelle Turingmaschine}]
+    \begin{defi}[universelle Turingmaschine]
         Eine universelle Turingmaschine erhält als Eingabe ein Paar $(\langle M\rangle,w)$ und Simuliert $M$ auf $w$.
     \end{defi}
 
-    \begin{satz}[Unentscheidbarkeit\index{Unentscheidbarkeit} der Diagonalsprache\index{Diagonalsprache}]
+    \begin{satz}[Unentscheidbarkeit der Diagonalsprache]
         Die Diagonalsprache ist definiert durch:
         \[L_d\coloneqq\set{w_i\mid T_{w_i}\text{ akzeptiert }w_i\text{ nicht}}\]
         Die Diagonalsprache $L_d$ ist nicht semi-entscheidbar.\\
-        $L_d^c$ ist semi-entscheidbar\index{semi-entscheidbar}.
+        $L_d^c$ ist semi-entscheidbar.
     \end{satz}
 
-    \begin{satz}[Unentscheidbarkeit\index{Unentscheidbarkeit} des Halteproblem\index{Halteproblem}]
+    \begin{satz}[Unentscheidbarkeit des Halteproblem]
         Das \tcol{Halteproblem} definiert folgende Sprache
         \[\mathcal{H}\coloneqq\set{wv\mid T_w\text{ hält auf der Eingabe }v}\]
         und ist semi-entscheidbar.\\
-        $H^c$ ist nicht semi-entscheidbar\index{semi-entscheidbar}.
+        $H^c$ ist nicht semi-entscheidbar.
     \end{satz}
 
-    \begin{satz}[Unentscheidbarkeit\index{Unentscheidbarkeit} der universellen Sprache\index{universelle Sprache}]
+    \begin{satz}[Unentscheidbarkeit der universellen Sprache]
         Die \tcol{universelle Sprache} ist definiert durch
         \[L_u\coloneqq\set{wv\mid v\in L(T_w)}\]
-        und ist nicht entscheidbar aber \tcol{semi-entscheidbar}\index{semi-entscheidbar}.
+        und ist nicht entscheidbar aber \tcol{semi-entscheidbar}.
     \end{satz}
 
-    \begin{satz}[Satz von Rice\index{Satz von Rice}]
+    \begin{satz}[Satz von Rice]
         Sei $R$ die Menge der von Turingmaschinen berechenbaren Funktionen und $S$ eine nichttriviale Teilmenge von $R$ ($\set{}\subsetneq S\subsetneq R$).
         Dann ist die Sprache \[L(S)\coloneqq\set{\langle M\rangle\mid M\text{ berechnet eine Funktion aus }S}\]
         nicht entscheidbar.
     \end{satz}
 
-    \begin{satz}[Eigenschaften von (semi-)entscheidbaren Sprachen\index{entscheidbar}\index{semi-entscheidbar}]
+    \begin{satz}[Eigenschaften von (semi-)entscheidbaren Sprachen]
         \begin{itemize}
             \item Die entscheidbaren Sprachen sind abgeschlossen unter Komplementbildung, Schnitt, Vereinigung und Mengendifferenz
             \item Die semi-entscheidbaren Sprachen sind abgeschlossen unter Schnitt und Vereinigung, aber \tcol{nicht unter Komplementbildung oder Mengendifferenz}
@@ -451,7 +448,7 @@
         \end{itemize}
     \end{satz}
 
-    \begin{prob}[Post'sche Korrespondenzproblem\index{Post'sche Korrespondenzproblem}]
+    \begin{prob}[Post'sche Korrespondenzproblem]
         Gegeben ist eine endliche Folge von Wortpaaren
         \[K=((x_1,y_1),\dots,(x_n,y_n))\]
         über einem endlichen Alphabet $\Sigma$.
@@ -462,14 +459,14 @@
 
 
 
-    \section{Komplexitätsklassen\index{Komplexitätsklassen}}
-	\label{sec:komplexitätsklassenindex}
+    \section{Komplexitätsklassen}
+	\label{sec:komplexitätsklassen}
 
 
     \subsection{Zeitkomplexität}
 	\label{subsec:zeitkomplexität}
 
-    \begin{defi}[Zeitkomplexitätsfunktion eine deterministischen Turingmaschine\index{Zeitkomplexitätsfunktion einer TM}]
+    \begin{defi}[Zeitkomplexitätsfunktion eine deterministischen Turingmaschine]
         Für eine deterministische Turingmaschine $M$, die für alle Eingaben über $\Sigma$ hält, ist die \tcol{Zeitkomplexitätsfunktion} $T_M\colon\mathbb{Z}^+\to\mathbb{Z}^+$ definiert durch:
         \[
             T_M(n)=\max\set{m\,\middle|\,
@@ -480,16 +477,16 @@
         \]
     \end{defi}
 
-    \begin{defi}[Die Klasse P\index{Problemklasse P}]
+    \begin{defi}[Die Klasse P]
         Die Klasse $P$ ist die Menge aller Sprachen, für $L$ (Probleme) für die es eine deterministische TM gibt, deren Zeitkomplexitätsfunktion polynomial ist.
         Das heißt es existiert ein Polynom $p$ mit\[T_M(n)\leq p(n).\]
     \end{defi}
 
 
-    \subsection{Die Nichtdeterministische Turingmaschine\index{nichtdeterministische Turingmaschine} und die Klasse NP\index{Problemklasse NP}}
-	\label{subsec:die-nichtdeterministische-turingmaschineindexund-die-klasse-npindex}
+    \subsection{Die Nichtdeterministische Turingmaschine und die Klasse NP}
+	\label{subsec:die-nichtdeterministische-turingmaschine-und-die-klasse-np}
 
-    \begin{defi}[Nichtdeterministische Turingmaschine\index{nichtdeterministische Turingmaschine}]
+    \begin{defi}[Nichtdeterministische Turingmaschine]
         Die \tcol{nichtdeterministische Turingmaschine} (NTM) wird analog zur TM definiert, hat aber zusätzlich zu der endlichen Kontrolle mit Lese-/Schreibkopf ein \tcol{Orakelmodul} mit eigenem Schreibkopf.\\
         Bei der Berechnung der DTM schreibt das Orakelmodul zuerst ein beliebiges Wort aus $\Gamma^*$ auf das Band und gibt anschließend die Kontrolle an den deterministischen Teil über.
     \end{defi}
@@ -499,7 +496,7 @@
         Sie akzeptiert eine Sprache $L\subseteq\Sigma^*$ genau dann, wenn sie grade die Wörter aus $L$ akzeptiert.
     \end{defi}
 
-    \begin{defi}[Zeitkomplexitätsfunktion eine nichtdeterministischen Turingmaschine\index{Zeitkomplexitätsfunktion einer NTM}]
+    \begin{defi}[Zeitkomplexitätsfunktion eine nichtdeterministischen Turingmaschine]
         Die Zeitkomplexitätsfunktion einer nichtdeterministische Turingmaschine $M$ $T_M\colon\mathbb{Z}^+\to\mathbb{Z}^+$ ist definiert durch:
         \[
             T_M(n)=\max\left(\set{1}\cup\set{m\,\middle|\,
@@ -514,12 +511,12 @@
         \textbf{Bemerkung vom Autor:} das ist ziemlich obskur definiert.
     \end{defi}
 
-    \begin{defi}[Die Klasse NP\index{Problemklasse NP}]
+    \begin{defi}[Die Klasse NP]
         Die Klasse $NP$ ist die Menge aller Sprachen (Probleme) $L$, für die es eine nichtdeterministische Turingmaschine gibt, deren Zeitkomplexitätsfunktion polynomial beschränkt ist.\\
         Alle Sprachen in $NP$ sind entscheidbar.
     \end{defi}
 
-    \begin{defi}[polynomiale Transformation\index{polynomiale Transformation}]
+    \begin{defi}[polynomiale Transformation]
         Eine \tcol{polynomiale Transformation} einer Sprache $L_1\subseteq\Sigma_1^*$ in eine Sprache $L_2\subseteq\Sigma_2^*$ ist eine Funktion $f\colon\Sigma_1^*\to\Sigma_2^*$ mit den Eigenschaften:
         \begin{itemize}
             \item es existiert eine polynomiale TM, die $f$ berechnet
@@ -528,7 +525,7 @@
         Wir schreiben dann $L_1\propto L_2$.
     \end{defi}
 
-    \begin{defi}[$NP$-vollständig\index{NP-vollständig}]
+    \begin{defi}[$NP$-vollständig]
         Eine Sprache $L$ heißt $NP$-vollständig, wenn $L\in NP$ und für alle $L'\in NP$ gilt $L'\propto L$.
     \end{defi}
 
@@ -542,7 +539,7 @@
 
     %TODO Orakelturingmaschine und Turing-Reduzierbarkeit
 
-    \begin{defi}[$NP$-schwer\index{NP-schwer}]
+    \begin{defi}[$NP$-schwer]
         Ein Suchproblem $\Pi$ heißt $NP$-schwer, falle es eine $NP$-vollständige Sprache $L$ gibt, mit $L\propto_T\Pi$.
         Also kann mit einem Algorithmus für $\Pi$ auch $L$ gelöst werden.
     \end{defi}
@@ -552,23 +549,23 @@
 	\label{subsec:komplementsprachen}
 
     \begin{defi}
-        Die Klasse \tcol{$NPC$}\index{NPC} sei die Klasse der $NP$-vollständigen Sprachen/Probleme.\\
-        Die Klasse \tcol{$NPI$}\index{NPI} ist definiert durch $NPI\coloneqq NP\setminus(P\cup NPC)$.\\
-        Die Klasse \tcol{$co-P$}\index{co-P} ist die Klasse aller Sprachen $\Sigma^*\setminus L$ für $L\subseteq\Sigma^*$ und $L\in P$ (die Klasse der Komplementsprachen).\\
-        Die Klasse \tcol{$co-NP$}\index{co-NP} ist die Klasse aller Sprachen $\Sigma^*\setminus L$ für $L\subseteq\Sigma^*$ und $L\in NP$
+        Die Klasse \tcol{$NPC$} sei die Klasse der $NP$-vollständigen Sprachen/Probleme.\\
+        Die Klasse \tcol{$NPI$} ist definiert durch $NPI\coloneqq NP\setminus(P\cup NPC)$.\\
+        Die Klasse \tcol{$co-P$} ist die Klasse aller Sprachen $\Sigma^*\setminus L$ für $L\subseteq\Sigma^*$ und $L\in P$ (die Klasse der Komplementsprachen).\\
+        Die Klasse \tcol{$co-NP$} ist die Klasse aller Sprachen $\Sigma^*\setminus L$ für $L\subseteq\Sigma^*$ und $L\in NP$
     \end{defi}
 
 
     \subsection{Pseudopolynomielle Algorithmen
-	\index{pseudopolynomielle Algorithmen}}\label{subsec:pseudopolynomielle-algorithmenindex}
+	}\label{subsec:pseudopolynomielle-algorithmen}
 
-    \begin{defi}[Pseudopolynomiell\index{pseudopolynomielle Algorithmen}]
+    \begin{defi}[Pseudopolynomiell]
         Sei $\Pi$ ein Optimierungsproblem.
         Ein Algorithmus, der $\Pi$ löst, heißt pseudopolynomiell, falls seine Laufzeit durch ein Polynom der \tcol{Eingabegröße} und der \tcol{Größe der größten in der Eingabe vorkommenden Zahl} beschränkt ist.
     \end{defi}
 
-    \begin{defi}[stark $NP$-vollständig\index{stark NP-vollständig}]
-        Ein Entscheidungsproblem\index{Entscheidungsproblem} $\Pi$ heißt stark $NP$-vollständig, wenn das Teilproblem $\Pi_p$, in dem nur Instanzen vorkommen, bei denen die größte Zahl polynomiell durch die Eingabelänge beschränkt ist, $NP$-vollständig ist.
+    \begin{defi}[stark $NP$-vollständig]
+        Ein Entscheidungsproblem $\Pi$ heißt stark $NP$-vollständig, wenn das Teilproblem $\Pi_p$, in dem nur Instanzen vorkommen, bei denen die größte Zahl polynomiell durch die Eingabelänge beschränkt ist, $NP$-vollständig ist.
     \end{defi}
 
     \begin{satz}
@@ -577,14 +574,14 @@
 
 
     \subsection{Approximationsalgorithmen
-	\index{Approximationsalgorithmen} für Optimierungsprobleme}\label{subsec:approximationsalgorithmenindexfür-optimierungsprobleme}
+	 für Optimierungsprobleme}\label{subsec:approximationsalgorithmen-für-optimierungsprobleme}
 
     \begin{defi}
         Für $I\in D_\Pi$ bezeichne $OPT(I)$ den Wert der Optimallösung.
         Zu einem Algorithmus $A$ bezeichne $A(I)$ den Wert, den $A$ für $I$ ausgibt.
     \end{defi}
 
-    \begin{defi}[Absoluter Approximationsalgorithmus\index{absoluter Approximationsalgorithmus}]
+    \begin{defi}[Absoluter Approximationsalgorithmus]
         Sei $\Pi$ ein Optimierungsproblem.
         Ein polynomialer Algorithmus $A$, der für jedes $I\in D_\Pi$ einen Wert $A(I)$ liefert, mit
         \[|OPT(I)-A(I)|\leq K\]
@@ -592,7 +589,7 @@
         Es gibt nur wenige $NP$-schwere Probleme, für die diese Art von Algorithmen bekannt sind.
     \end{defi}
 
-    \begin{defi}[Approximationsalgorithmus mit relativer Gütegarantie\index{relativer Approximationsalgorithmus}]
+    \begin{defi}[Approximationsalgorithmus mit relativer Gütegarantie]
         Sei $\Pi$ ein Optimierungsproblem.
         Ein polynomialer Algorithmus $A$, der für jedes $I\in D_\Pi$ einen Wert $A(I)$ liefert, mit $R_A(I)\leq K$, wobei $K\geq 1$ eine Konstante, und
         \[R_A(I)\coloneqq
@@ -610,13 +607,13 @@
         \[R^{\,\infty}_A\coloneqq\set{r\geq 1 \mid\text{es gibt ein $N_0>0$, so dass $R_A(I)\leq r$ für alle $I$ mit $OPT(I)\geq N_0$}}\]
     \end{defi}
 
-    \begin{defi}[Approximationsschemata\index{Approximationsschema}]
+    \begin{defi}[Approximationsschemata]
         Ein (polynomiales) Approximationsschemata (PAS) für ein Optimierungsproblem $\Pi$ ist eine \tcol{Familie von Algorithmen} $\set{A_\epsilon\mid\epsilon>0}$, sodass für alle $\epsilon>0$
         \begin{itemize}
             \item $R_{A_\epsilon}\leq 1+\epsilon$ ist (d.h. $A_\epsilon$ ist ein $\epsilon$-approximierender Algorithmus).
             \item $A_\epsilon$ polynomial in der Größe des Inputs ist.
         \end{itemize}
-        Ein Approximationsschema $\set{A_\epsilon\mid\epsilon>0}$ heißt \tcol{vollpolynomial}\index{vollpolynomiales Approximationsschema} (FPAS) falls seine Laufzeit zudem polynomial in $\frac{1}{\epsilon}$ ist.
+        Ein Approximationsschema $\set{A_\epsilon\mid\epsilon>0}$ heißt \tcol{vollpolynomial} (FPAS) falls seine Laufzeit zudem polynomial in $\frac{1}{\epsilon}$ ist.
     \end{defi}
 
     \begin{satz}
@@ -635,16 +632,16 @@
             \item $OPT(I)\in\mathbb{N}$ für alle $I\in D_\Pi$
             \item es existiert ein Polynom $q$ mit $OPT(I)\leq q(\langle I\rangle,\max(I))$
         \end{itemize}
-        Dann hat $\Pi$ genau dann ein FPAS, wenn es zu $\Pi$ einen \tcol{pseudopolynomialen optimalen Algorithmus}\index{pseudopolynomielle Algorithmen} gibt
+        Dann hat $\Pi$ genau dann ein FPAS, wenn es zu $\Pi$ einen \tcol{pseudopolynomialen optimalen Algorithmus} gibt
     \end{satz}
 
 
 
-    \section{Grammatiken und die Chomsky-Hierarchie\index{Chomsky-Hierarchie}}
-	\label{sec:grammatiken-und-die-chomsky-hierarchieindex}
+    \section{Grammatiken und die Chomsky-Hierarchie}
+	\label{sec:grammatiken-und-die-chomsky-hierarchie}
 
 
-    \begin{defi}[Grammatik\index{Grammatik}]
+    \begin{defi}[Grammatik]
         Eine Grammatik $G=(\Sigma,V,S,R)$ besteht auf 4 Komponenten:
         \begin{itemize}
             \item Endliches \tcol{Alphabet} $\Sigma$
@@ -657,19 +654,19 @@
         $L(G)$ bezeichnet die von $G$ \tcol{erzeugte Sprache} $\set{w\in\Sigma^*\mid S\rightarrow^*w}$.
     \end{defi}
 
-    \begin{defi}[Chomsky-Hierarchie\index{Chomsky-Hierarchie}]
+    \begin{defi}[Chomsky-Hierarchie]
         \begin{description}
             \item[Typ 0] Grammatiken ohne weitere Einschränkungen.
-            \item[Typ 1 oder kontextsensitiv\index{kontextsensitive Sprache}] Grammatiken, bei denen alle Ableitungsregeln die Form habe:
+            \item[Typ 1 oder kontextsensitiv] Grammatiken, bei denen alle Ableitungsregeln die Form habe:
             \begin{itemize}
                 \item $u\rightarrow v$ mit $u\in V^+,v\in(\left(V\cup\Sigma\right)\setminus\set{S})^+$ und $|u|\leq |v|$, oder
                 \item $S\rightarrow\epsilon$
             \end{itemize}
-            \item[Typ 2 oder kontextfrei\index{kontextfrei}] Grammatiken, bei denen alle Ableitungsregeln die Form haben:
+            \item[Typ 2 oder kontextfrei] Grammatiken, bei denen alle Ableitungsregeln die Form haben:
             \begin{itemize}
                 \item $A\rightarrow v$ mit $A\in V$ und $v\in(V\cup\Sigma)^*$
             \end{itemize}
-            \item[Typ 3 oder rechtslinear\index{rechtslinear}] Grammatiken, bei denen alle Ableitungsregeln die Form haben:
+            \item[Typ 3 oder rechtslinear] Grammatiken, bei denen alle Ableitungsregeln die Form haben:
             \begin{itemize}
                 \item $A\rightarrow v$ mit $A\in V$ und $v=\epsilon$ oder $v=aB$ mit $a\in\Sigma,B\in V$
             \end{itemize}
@@ -677,7 +674,7 @@
     \end{defi}
 
     \begin{satz}
-        Die Chomsky-Hierarchie\index{Chomsky-Hierarchie} ist echt.
+        Die Chomsky-Hierarchie ist echt.
         Also $L_3\subset L_2\subset L_1\subset L_0$, wobei $L_i$ Klasse der durch Typ-$i$-Grammatiken erzeugten Sprachen.
     \end{satz}
 
@@ -686,18 +683,18 @@
 	\label{subsec:chomsky-0-grammatiken-und-rekursiv-aufzählbare-sprachen}
 
     \begin{satz}
-        Falls $L$ rekursiv-aufzählbar\index{rekursiv-aufzählbar} (semi-entscheidbar)\index{semi-entscheidbar} ist, so gibt es eine Chomsky-0-Grammatik G mit $L(G)=L$.
+        Falls $L$ rekursiv-aufzählbar (semi-entscheidbar) ist, so gibt es eine Chomsky-0-Grammatik G mit $L(G)=L$.
     \end{satz}
 
     \begin{satz}
-        Die von Typ-0-Grammatiken $G$ erzeugten Sprachen sind rekursiv-aufzählbar\index{rekursiv-aufzählbar}.
+        Die von Typ-0-Grammatiken $G$ erzeugten Sprachen sind rekursiv-aufzählbar.
     \end{satz}
 
 
-    \subsection{Chomsky-1-Grammatiken bzw.\ kontextsensitive Sprachen\index{kontextsensitive Sprache}}
-	\label{subsec:chomsky-1-grammatiken-bzw.-kontextsensitive-sprachenindex}
+    \subsection{Chomsky-1-Grammatiken bzw.\ kontextsensitive Sprachen}
+	\label{subsec:chomsky-1-grammatiken-bzw.-kontextsensitive-sprachen}
 
-    \begin{defi}[DTAPE\index{DTAPE} und NTAPE\index{NTAPE}]
+    \begin{defi}[DTAPE und NTAPE]
         $DTAPE(s(n))$ ist die Klasse der Sprachen $L$, für die es eine DTM mit Platzbedarf $s(n)$ (bei Eingabelänge n) gibt, die $L$ akzeptiert.\\
         $NTAPE(s(n))$ ist die Klasse der Sprachen $L$, für die es eine NTM mit Platzbedarf $s(n)$ (bei Eingabelänge n) gibt, die $L$ akzeptiert.\\
         Es gilt $NTAPE(n)=NTAPE(f(n))$ für eine lineare Funktion $f$.
@@ -709,17 +706,17 @@
     \end{satz}
 
 
-    \subsection{Chomsky-2-Grammatiken bzw.\ kontextfreie Sprachen\index{kontextfreie Sprache} und Syntaxbäume}
-	\label{subsec:chomsky-2-grammatiken-bzw.-kontextfreie-sprachenindexund-syntaxbäume}
+    \subsection{Chomsky-2-Grammatiken bzw.\ kontextfreie Sprachen und Syntaxbäume}
+	\label{subsec:chomsky-2-grammatiken-bzw.-kontextfreie-sprachen-und-syntaxbäume}
 
-    \begin{defi}[eindeutige Grammatik\index{eindeutige Grammatik}]
+    \begin{defi}[eindeutige Grammatik]
         Eine kontextfreie Grammatik $G$ heißt \tcol{eindeutig}, wenn es für jedes Wort $w\in L(G)$ \tcol{genau einen Syntaxbaum} gibt.
         Eine kontextfreie Sprache $L$ heißt eindeutig, wenn es eine eindeutige Grammatik $G$ mit $L(G)=G$ gibt.
         Ansonsten heißt $L$ \tcol{inhärent mehrdeutig}.\\
         Bemerke: Zu jedem Syntaxbaum gehören mehrere Ableitungen zu jeder Ableitung aber nur ein Syntaxbaum.
     \end{defi}
 
-    \begin{defi}[Chromsky-Normalform\index{Chromsky-Normalform}]
+    \begin{defi}[Chromsky-Normalform]
         Eine kontextfreie Grammatik ist in Chomsky-Normalform, wenn alle Regeln von der Form:
         \begin{itemize}
             \item $A\rightarrow BC$ oder
@@ -727,11 +724,11 @@
         \end{itemize}
         sind, mit $A,B,C\in V$ und $a\in\Sigma$.\\
         Für kontextfreie Sprachen, die $\epsilon$ enthalten, lässt sich die Grammatik durch $S'\rightarrow\epsilon$ und $S'\rightarrow S$ ergänzen.
-        Dies wird als \tcol{erweiterte Chomsky-Normalform\index{erweiterte Chomsky-Normalform}} bezeichnet.\\
-        Jede kontextfreie Grammatik kann in eine Grammatik in erweiterte Chomsky-Normalform\index{erweiterte Chomsky-Normalform} überführt werden.
+        Dies wird als \tcol{erweiterte Chomsky-Normalform} bezeichnet.\\
+        Jede kontextfreie Grammatik kann in eine Grammatik in erweiterte Chomsky-Normalform überführt werden.
     \end{defi}
 
-    \begin{verf}[Umwandlung in Chomsky-Normalform\index{Chomsky-Normalform}]
+    \begin{verf}[Umwandlung in Chomsky-Normalform]
         \begin{description}
             \item[Schritt 1:] Ersetze in allen Regeln, bei denen auf der rechten Seite ein Terminalsymbol $a\in\Sigma$ nicht alleine steht durch $Y_a\in V$ und füge die Regel $Y_a\rightarrow a$ hinzu.
             \item[Schritt 2:] Ersetze Regeln der Art $A\rightarrow B_1\dots B_m$ mit $m>2$ durch die Regeln.
@@ -749,11 +746,11 @@
         \end{description}
     \end{verf}
 
-    \begin{satz}[Cocke-Younger-Kasami Algorithmus\index{Cocke-Younger-Kasami Algorithmus} (CYK Algorithmus)]
-        Das Wortproblem zu kontextfreien Grammatiken in Chomsky-Normalform\index{Chomsky-Normalform} kann in polynomieller Zeit gelöst werden (Abhängig von Wortgröße und Anzahl der Ableitungsschritte).
+    \begin{satz}[Cocke-Younger-Kasami Algorithmus (CYK Algorithmus)]
+        Das Wortproblem zu kontextfreien Grammatiken in Chomsky-Normalform kann in polynomieller Zeit gelöst werden (Abhängig von Wortgröße und Anzahl der Ableitungsschritte).
     \end{satz}
 
-    \begin{verf}[Cocke-Younger-Kasami Algorithmus\index{Cocke-Younger-Kasami Algorithmus} (CYK Algorithmus)]
+    \begin{verf}[Cocke-Younger-Kasami Algorithmus (CYK Algorithmus)]
         Es wird \tcol{dynamische Programmierung} verwendet.\\
         Sei $w=w_1\dots w_n$ und $V_{ij}\subseteq V$ die Menge an Variablen $A$, sodass $A\rightarrow^*w_i\dots w_j$ impliziert.
         Baue eine Tabelle mit wachsendem $l\coloneqq j-i$ auf beginnend mit $l=0$.\\
@@ -762,25 +759,25 @@
         Anschließend wird untersucht, ob eine Ableitungsregeln $A\rightarrow BC$ existiert mit $B\rightarrow^* w_i\dots w_k$ und $C\rightarrow^* w_{k+1}\dots w_j$.
     \end{verf}
 
-    \begin{satz}[Pumping-Lemma für kontextfreie Sprachen\index{Pumping-Lemma für kontextfreie Sprachen}]
+    \begin{satz}[Pumping-Lemma für kontextfreie Sprachen]
         Für jede kontextfreie Sprache $L$ gibt es eine Konstante $n\in\mathbb{N}$, sodass sich jedes Wort $z\in L$ mit $|z|\geq n$ so als $z=uvwxy$ schreiben lässt, dass $|vx|\geq 1,|vwx|\leq n$ und für alle $I\geq 1$ das Wort $uv^{i}wx^{i}y\in L$ ist.
     \end{satz}
 
-    \begin{satz}[Ogden's Lemma\index{Ogden's Lemma}]
+    \begin{satz}[Ogden's Lemma]
         Für jede kontextfreie Sprache $L$ gibt es eine Konstante $n\in\mathbb{N}$, sodass sich jedes Wort $z\in L$ mit $|z|\geq n$ gilt:\\
         Markieren wir in $z$ mindestens $n$ Buchstaben, so lässt sich $z$ so als $z=uvwxy$ schreiben, dass von den mindestens $n$ markierten Buchstaben mindestens einer zu $vx$ und höchstens $n$ zu $vwx$ gehören und für alle $I\geq 1$ das Wort $uv^{i}wx^{i}y\in L$ ist.
     \end{satz}
 
-    \begin{defi}[Nutzlose Variablen\index{nutzlose Variablen}]
-        Sei $G$ eine kontextfreie Grammatik\index{kontextfreie Grammatik}.
+    \begin{defi}[Nutzlose Variablen]
+        Sei $G$ eine kontextfreie Grammatik.
         Eine Variable $A$ heißt nutzlos, falls es keine Ableitung $S\rightarrow^* w$ gibt, mit $w\in\Sigma^*$, in der $A$ vorkommt.
     \end{defi}
 
     \begin{satz}
-        Für eine kontextfreie Grammatik\index{kontextfreie Grammatik} kann die Menge der \tcol{nutzlosen Variable} in polynomialer Laufzeit berechnet werden.
+        Für eine kontextfreie Grammatik kann die Menge der \tcol{nutzlosen Variable} in polynomialer Laufzeit berechnet werden.
     \end{satz}
 
-    \begin{verf}[Bestimmen von nutzlose Variablen\index{nutzlose Variablen}]
+    \begin{verf}[Bestimmen von nutzlose Variablen]
         Berechne zuerst $V'\subseteq V$, mit $A\in V'$ genau dann, wenn es $w\in\Sigma^*$ gibt mit $A\rightarrow^*w$\\
         Berechne anschließend $V''\subseteq V'$ aller $A\in V'$, für die es eie Ableitung $S\rightarrow^*\alpha A\beta$ mit $\alpha\beta\in(V'\cup\Sigma)^*$ oder $A=S$.\\
         $V''$ ist die Menge der \tcol{nützlichen Variablen}.
@@ -795,16 +792,15 @@
         Die Klasse der kontextfreien Sprachen ist \tcol{nicht abgeschlossen} bzgl.\ Komplementbildung und Durchschnitt\\
     \end{satz}
 
-    \begin{defi}[Greibach-Normalform\index{Greibach-Normalform}]
+    \begin{defi}[Greibach-Normalform]
+        \textit{Diese Definition ist seit dem WS2021 kein Teil der Vorlesung mehr, der Vollständigkeit halber soll sie jedoch weiter hier erwähnt bleiben.}\\
         Eine kontextfreie Grammatik $G$ ist in Greibach-Normalform, wenn alle Ableitungsregeln der Form
         \[A\rightarrow a\alpha\text{ mit }A\in V,a\in\Sigma\text{ und }\alpha\in V^*\]
         sind.\\
         Jede kontextfreie Grammatik $G$, für die $L(G)$ das leere Wort nicht enthält, kann in eine Greibach-Normalform überführt werden.
     \end{defi}
 
-    %TODO Verfahren für Greibach-Normalform
-
-    \begin{defi}[Kellerautomat\index{Kellerautomat}(NPDA bzw.\ PDA)]
+    \begin{defi}[Kellerautomat(NPDA bzw.\ PDA)]
         Ein (nichtdeterministischer) Kellerautomat besteht aus $(Q,\Sigma,\Gamma,q_0,Z_0,\delta,F)$,wobei
         \begin{itemize}
             \item $Q$ \tcol{endliche Zustandsmenge}
@@ -819,7 +815,7 @@
     \end{defi}
 
     \begin{satz}[Äquivalenz des Akzeptanzverhalten von PDAs]
-        Zu einem PDA\index{Kellerautomat}, der eine Sprache $L$ durch einen akzeptierenden Endzustand akzeptiert, kann ein PDA konstruiert werden, der $L$ mit leerem STACK akzeptiert \tcol{und umgekehrt}.
+        Zu einem PDA, der eine Sprache $L$ durch einen akzeptierenden Endzustand akzeptiert, kann ein PDA konstruiert werden, der $L$ mit leerem STACK akzeptiert \tcol{und umgekehrt}.
     \end{satz}
 
     \begin{satz}
@@ -827,16 +823,16 @@
     \end{satz}
 
 
-    \subsection{Chomsky-3-Grammatiken und reguläre Sprachen\index{reguläre Sprachen}}
-	\label{subsec:chomsky-3-grammatiken-und-reguläre-sprachenindex}
+    \subsection{Chomsky-3-Grammatiken und reguläre Sprachen}
+	\label{subsec:chomsky-3-grammatiken-und-reguläre-sprachen}
 
     \begin{satz}
-        Die Klasse der von endlichen Automaten\index{endlicher Automat} akzeptieren Sprachen ist genau die Klasse von Chomsky-3-Grammatiken erzeugten Sprachen
+        Die Klasse der von endlichen Automaten akzeptieren Sprachen ist genau die Klasse von Chomsky-3-Grammatiken erzeugten Sprachen
     \end{satz}
 
 
-    \subsection{Unentscheidbare Probleme für kontextfreie Grammatiken\index{kontextfreie Grammatiken}}
-	\label{subsec:unentscheidbare-probleme-für-kontextfreie-grammatikenindex}
+    \subsection{Unentscheidbare Probleme für kontextfreie Grammatiken}
+	\label{subsec:unentscheidbare-probleme-für-kontextfreie-grammatiken}
 
     \begin{satz}
         Das Problem für kontextfreie Grammatiken $G_1$ und $G_2$ zu entscheiden, ob $L(G_1\cap G_2=\set{}$ ist, ist \tcol{nicht entscheidbar}.
@@ -896,21 +892,21 @@
 
 
 
-    \section{Informationstheorie\index{Informationstheorie}}
-	\label{sec:informationstheorieindex}
+    \section{Informationstheorie}
+	\label{sec:informationstheorie}
 
 
-    \subsection{Quellkodierung\index{Quellkodierung}}
-	\label{subsec:quellkodierungindex}
+    \subsection{Quellkodierung}
+	\label{subsec:quellkodierung}
 
     Wir betrachten $\Sigma=\set{1,\dots,n}$ eine Menge von Zeichen mit Wahrscheinlichkeit $\set{p_1,\dots,p_n}$. $X$ (Zufallsvariable/Informationsquelle) liefert $i\in\Sigma$ mit Wahrscheinlichkeit $p_i$.
 
-    \begin{defi}[Information\index{Information}]
+    \begin{defi}[Information]
         Die Information einer Wahrscheinlichkeit $p$ ist
         \[I\coloneqq\log_2\left(\frac{1}{p}\right)=-\log_2(p).\]
     \end{defi}
 
-    \begin{defi}[Entropie\index{Entropie}]
+    \begin{defi}[Entropie]
         Die Entropie einer diskreten Zufallsvariable $X$ mit Wahrscheinlichkeiten $p(x)$ für $x\in X$ ist definiert durch
         \[H(X)\coloneqq\sum_{x\in X}p(x)\log_2\left(\frac{1}{p(x)}\right)\]
     \end{defi}
@@ -919,8 +915,8 @@
 
 
 
-    \section{Probleme\index{Problem}}
-	\label{sec:problemeindex}
+    \section{Probleme}
+	\label{sec:probleme}
 
 
     \subsection{Definitionen und Begriffe}
@@ -929,18 +925,18 @@
     \begin{defi}[Problemvarianten]
         Zu den meisten Problemen gibt es verschiedene Problemvarianten.
         \begin{itemize}
-            \item \tcol{Optimierungsproblem}\index{Optimierungsproblem}: Gesucht ist die optimale Lösung eines gegebenen Problems.
-            \item \tcol{Optimalwertproblem}\index{Optimalwertproblem}: Gesucht ist der Wert der optimalen Lösung.
-            \item \tcol{Entscheidungsproblem}\index{Entscheidungsproblem}: Es soll entschieden Werden, ob es Lösungen gibt, die besser als ein gegebener Wert $k$ sind.
+            \item \tcol{Optimierungsproblem}: Gesucht ist die optimale Lösung eines gegebenen Problems.
+            \item \tcol{Optimalwertproblem}: Gesucht ist der Wert der optimalen Lösung.
+            \item \tcol{Entscheidungsproblem}: Es soll entschieden Werden, ob es Lösungen gibt, die besser als ein gegebener Wert $k$ sind.
         \end{itemize}
     \end{defi}
 
-    \begin{defi}[Kodierungsschema\index{Kodierungsschema}]
+    \begin{defi}[Kodierungsschema]
         Ein \tcol{Kodierungsschema} ordnet jeder Probleminstanz eines Problems eine Zeichenkette über dem Alphabet $\Sigma$ zu.
-        Die \tcol{Inputlänge}\index{Inputlänge} eines Problembeispiels ist die Anzahl der Symbole der Kodierung.
+        Die \tcol{Inputlänge} eines Problembeispiels ist die Anzahl der Symbole der Kodierung.
     \end{defi}
 
-    \begin{defi}[äquivalente Kodierungsschemata\index{äquivalente Kodierungsschema}]
+    \begin{defi}[äquivalente Kodierungsschemata]
         Zwei Kodierungsschemata heißen \tcol{äquivalent} bezüglich eines Problems $\Pi$, wenn sie sich gegenseitig durch Polynome abschätzen lassen für alle Instanzen von $\Pi$.
     \end{defi}
 
@@ -954,12 +950,12 @@
         Eine deterministische Turingmaschine $M$ \tcol{löst} ein Entscheidungsproblem $\Pi$ unter der Kodierung $s$, wenn $M$ für jede Eingabe hält und $L_M=L[\Pi,s]$.
     \end{defi}
 
-    \begin{defi}[Suchproblem\index{Suchproblem}]
+    \begin{defi}[Suchproblem]
         Ein Suchproblem $\Pi$ wird beschrieben durch eine Menge von Probleminstanzen $D_\Pi$ und für $I\in D_\Pi$ die Menge $S_\Pi(I)$ \tcol{aller} Lösungen von $I$.\\
         Die Lösung eines Suchproblems besteht in der \tcol{Angabe einer Lösung} aus $S_\Pi(I)$.
     \end{defi}
 
-    \begin{defi}[Aufzählungsproblem\index{Aufzählungsproblem}]
+    \begin{defi}[Aufzählungsproblem]
         Ein Aufzählungsproblem $\Pi$ wird beschrieben durch eine Menge von Probleminstanzen $D_\Pi$ und für $I\in D_\Pi$ die Menge $S_\Pi(I)$ \tcol{aller} Lösungen von $I$.\\
         Die Lösung eines Aufzählungsproblems besteht in der \tcol{Angabe der Kardinalität} von $S_\Pi(I)$ also $|S_\Pi(I)|$.
     \end{defi}
@@ -980,111 +976,109 @@
     \subsection{Beispiele}
 	\label{subsec:beispiele}
 
-    \begin{prob}[Post'sche Korrespondenzproblem\index{Post'sche Korrespondenzproblem}]
+    \begin{prob}[Post'sche Korrespondenzproblem]
         Gegeben ist eine endliche Folge von Wortpaaren
         \[K=((x_1,y_1),\dots,(x_n,y_n))\]
         über einem endlichen Alphabet $\Sigma$.
         Es gilt $x_i\neq\epsilon$ und $y_i\neq\epsilon$.\\
         Gesucht ist, eine endliche Folge von Indizes $i_1,\dots,i_k\in\set{1,\dots,n}$, sodass $x_{i_1}\dots x_{i_k}=y_{i_1}\dots y_{i_k}$ gilt.\\
-        Dieses Problem ist nicht entscheidbar\index{Unentscheidbarkeit}.
+        Dieses Problem ist nicht entscheidbar.
     \end{prob}
 
-    \begin{prob}[Traveling Salesman Problem\index{Traveling Salesman Problem} (TSP)]
+    \begin{prob}[Traveling Salesman Problem (TSP)]
         Gegeben sei ein vollständiger Graph $G=(V,E)$, sowie eine Kostenfunktion $c\colon E\to\mathbb{Z}^+$.\\
         Gesucht ist eine Tour, die alle Elemente aus $V$ enthält und minimale Gesamtlänge hat.\\
-        Das TSP ist $NP$-vollständig\index{NP-vollständig}\\
+        Das TSP ist $NP$-vollständig\\
         Für das TSP mit \tcol{Dreiecksungleichung} existiert ein Approximationsalgorithmus $A$ mit $R_A\leq 2$ für alle Instanzen $I$.
     \end{prob}
 
-    \begin{prob}[SAT\index{SAT}]
+    \begin{prob}[SAT]
         Gegeben ist eine Menge $U$ von Variablen, und eine Menge $C$ von Klauseln über $U$.\\
         Gesucht ist eine Wahrheitsbelegung von $U$, sodass $C$ erfüllt wird.
         Also in jeder Klausel mindestens eine Variable Wahr ist.\\
-        SAT ist $NP$-vollständig\index{NP-vollständig}.
+        SAT ist $NP$-vollständig.
     \end{prob}
 
-    \begin{prob}[3SAT\index{3SAT}]
+    \begin{prob}[3SAT]
         Gegeben ist eine Menge $U$ von Variablen, und eine Menge $C$ von Klauseln über $U$, wobei jede Klausel \tcol{genau drei} Literale enthält.\\
         Gesucht ist eine Wahrheitsbelegung von $U$, sodass $C$ erfüllt wird.
         Also in jeder Klausel mindestens eine Variable Wahr ist.\\
-        3SAT ist $NP$-vollständig\index{NP-vollständig}.
+        3SAT ist $NP$-vollständig.
     \end{prob}
 
-    \begin{prob}[2SAT\index{2SAT}]
+    \begin{prob}[2SAT]
         Gegeben ist eine Menge $U$ von Variablen, und eine Menge $C$ von Klauseln über $U$, wobei jede Klausel \tcol{genau zwei} Literale enthält.\\
         Gesucht ist eine Wahrheitsbelegung von $U$, sodass $C$ erfüllt wird.
         Also in jeder Klausel mindestens eine Variable Wahr ist.\\
         Im Gegensatz zu 3SAT ist 2SAT$\in P$.
     \end{prob}
 
-    \begin{prob}[Max2SAT\index{Max2SAT}]
+    \begin{prob}[Max2SAT]
         Gegeben ist eine Menge $U$ von Variablen, und eine Menge $C$ von Klauseln über $U$, wobei jede Klausel \tcol{genau zwei} Literale enthält und eine Zahl $K\in\mathbb{N}$\\
         Gesucht ist eine Wahrheitsbelegung von $U$, sodass \tcol{mindestens $K$ Klauseln} aus $C$ erfüllt wird.\\
-        Max2SAT ist $NP$-vollständig\index{NP-vollständig}.
+        Max2SAT ist $NP$-vollständig.
     \end{prob}
 
-    \begin{prob}[CLIQUE\index{CLIQUE}]
+    \begin{prob}[CLIQUE]
         Gegeben ist ein Graph $G=(V,E)$ und ein Parameter $K\leq |V|$\\
         Gesucht ist eine \tcol{Clique} $V'\subseteq V$ der Größe $K$, sodass für alle $i,j\in V', i\neq j$ gilt: $\set{i,j}\in E.$
-        CLIQUE ist $NP$-vollständig\index{NP-vollständig}.\\
-        Falls $P\neq NP$ existiert kein absoluter Approximationsalgorithmus\index{absoluter Approximationsalgorithmus} für CLIQUE\@.
+        CLIQUE ist $NP$-vollständig.\\
+        Falls $P\neq NP$ existiert kein absoluter Approximationsalgorithmus für CLIQUE\@.
     \end{prob}
 
-    \begin{prob}[COLOR\index{COLOR}]
+    \begin{prob}[COLOR]
         Gegeben ist ein Graph $G=(V,E)$ und ein Parameter $K\in\mathbb{N}$\\
         Gesucht ist eine \tcol{Knotenfärbung} von $G$ mit höchstens $K$ Farben, sodass je zwei adjazente Knoten verschiedene Farben besitzen.\\
         3COLOR bezeichnet das Problem COLOR mit festem $K=3$.
-        3COLOR ist $NP$-vollständig\index{NP-vollständig}.\\
-        Falls $P\neq NP$, dann existiert kein relativer Approximationsalgorithmus\index{relativer Approximationsalgorithmus} $A$ für COLOR mit $R^{\,\infty}_A<\frac{4}{3}$.
+        3COLOR ist $NP$-vollständig.\\
+        Falls $P\neq NP$, dann existiert kein relativer Approximationsalgorithmus $A$ für COLOR mit $R^{\,\infty}_A<\frac{4}{3}$.
     \end{prob}
 
-    \begin{prob}[SUBSET SUM\index{SUBSET SUM}]
+    \begin{prob}[SUBSET SUM]
         Gegeben ist eine endliche Menge $M$, eine Gewichtsfunktion $w\colon M\to\mathbb{N}_0$ und $K\in\mathbb{N}_0$.\\
         Gesucht ist eine Teilmenge $M'\subseteq M$ mit
         \[\sum_{a\in M'}w(a)=K.\]
-        SUBSET SUM ist $NP$-vollständig\index{NP-vollständig}.
+        SUBSET SUM ist $NP$-vollständig.
     \end{prob}
 
-    \begin{prob}[PARTITION\index{PARTITION}]
+    \begin{prob}[PARTITION]
         Gegeben ist eine endliche Menge $M$ und eine Gewichtsfunktion $w\colon M\to\mathbb{N}
         _0$.\\
         Gesucht ist eine Teilmenge $M'\subseteq M$ mit
         \[\sum_{a\in M'}w(a)=\sum_{a\in M\setminus M'}w(a)\]
-        PARTITION ist $NP$-vollständig\index{NP-vollständig}.
+        PARTITION ist $NP$-vollständig.
     \end{prob}
 
-    \begin{prob}[KNAPSACK\index{KNAPSACK}]
+    \begin{prob}[KNAPSACK]
         Gegeben ist eine endliche Menge $M$, eine \tcol{Gewichtsfunktion} $w\colon M\to\mathbb{N}$ und eine \tcol{Kostenfunktion} $c\colon M\to\mathbb{N}
         _0$ und $W,C\in\mathbb{N}_0$.\\
         Gesucht ist eine Teilmenge $M'\subseteq M$ mit
         \[\sum_{a\in M'}w(a)\leq W\text{ und }\sum_{a\in M'}c(a)\geq C\]
-        KNAPSACK ist $NP$-vollständig\index{NP-vollständig}.\\
-        Falls $P\neq NP$ existiert kein absoluter Approximationsalgorithmus\index{absoluter Approximationsalgorithmus} für KNAPSACK. Es gibt einen einfachen \tcol{Greedy-Algorithmus} $A$, mit $R_A(I)\leq 2$ für alle Instanzen $I$.\\
+        KNAPSACK ist $NP$-vollständig.\\
+        Falls $P\neq NP$ existiert kein absoluter Approximationsalgorithmus für KNAPSACK. Es gibt einen einfachen \tcol{Greedy-Algorithmus} $A$, mit $R_A(I)\leq 2$ für alle Instanzen $I$.\\
         Für KNAPSACK existiert ein FPAS. Es verwendet \tcol{dynamische Programmierung mit skalierten Eingabegrößen}.
     \end{prob}
 
-    \begin{prob}[Hamilton-Kreis\index{Hamilton-Kreis}]
+    \begin{prob}[Hamilton-Kreis]
         Gegeben ist ein ungerichteter, ungewichteter Graph $G=(V,E)$.\\
         Gesucht ist ein \tcol{Hamilton-Kreis} in $G$.
         Ein Hamilton-Kreis ist eine Permutation $\pi$ auf $V$, sodass $\set{\pi(n),\pi(1)}\in E$ und $\set{\pi(i),\pi(i-1)}\in E$ für $1\leq i\leq n-1$.
     \end{prob}
 
-    \begin{prob}[Subgraphisomorphie\index{Subgraphisomorphie}]
+    \begin{prob}[Subgraphisomorphie]
         Gegeben sind Graphen $G$ und $H$ wobei \tcol{$H$ weniger Knoten als $G$} besitzt.\\
         Es wird danach gefragt, ob $H$ isomorph zu einem Subgraphen von $G$ ist.\\
-        Subgraphisomorphie ist $NP$-vollständig\index{NP-vollständig}.
+        Subgraphisomorphie ist $NP$-vollständig.
     \end{prob}
 
-    \begin{prob}[Graphisomorphie\index{Graphisomorphie}]
+    \begin{prob}[Graphisomorphie]
         Gegeben sind Graphen $G$ und $H$ mit \tcol{gleich vielen Knoten}.\\
         Es wird danach gefragt, ob $G$ und $H$ zueinander isomorph sind.\\
-        Graphisomorphie ist ein Kandidat für ein Problem aus $NPI$\index{NPI}.
-        Vielleicht ist es auch in $P$\index{P}.
+        Graphisomorphie ist ein Kandidat für ein Problem aus $NPI$.
+        Vielleicht ist es auch in $P$P.
     \end{prob}
 
     \newpage
     \enquote{Da ich den kürzesten Weg durch die Vorlesung gefunden habe, sind wir jetzt schon fertig.}
-
-    \printindex
 
 \end{document}
