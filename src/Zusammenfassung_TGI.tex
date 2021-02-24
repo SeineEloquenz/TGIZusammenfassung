@@ -105,7 +105,7 @@
             \item Der Kleene'sche Abschluss ist definiert durch $L^*\coloneqq \bigcup\limits_{i\geq 0} L^i$
             \item Der positive Kleene'sche Abschluss ist definiert durch $L^+\coloneqq \bigcup\limits_{i\geq 1} L^i$
             \item Die Quotientensprache bezeichnet $L_1/L_2\coloneqq\set{w\in \Sigma^*\mid\exists z\in L_2\text{ mit } w\cdot z\in L_1}$
-            \item Die Komplementsprachen bezeichnet $L^c\coloneqq\Sigma^*\setminus L$
+            \item Die Komplementsprache bezeichnet $L^c\coloneqq\Sigma^*\setminus L$
         \end{itemize}
     \end{defi}
 
@@ -298,7 +298,7 @@
         Mit $[q]$ bezeichnen wir die \tcol{Äquivalenzklasse} der zu $q$ äquivalenten Zustände.
     \end{defi}
 
-    \begin{verf}[Konstruktion des \tcol{Äquivalenzklasseautomaten}]
+    \begin{verf}[Konstruktion des \tcol{Äquivalenzklassenautomaten}]
         Zu einem DEA $A=(Q,\Sigma,\delta ,s,F)$ definieren wir den Äquivalenzklassenautomaten $A^\equiv=(Q^\equiv ,\Sigma^\equiv ,\delta^\equiv ,s^\equiv ,F^\equiv)$ durch:
         \begin{itemize}
             \item $Q^\equiv\coloneqq\set{[q]\mid q\in Q}$
@@ -313,7 +313,7 @@
     \end{verf}
 
     \begin{satz}
-        Der Äquivalenzklasseautomat $A^\equiv$ zu $A$ akzeptiert dieselbe Sprache wie $A$.
+        Der Äquivalenzklassenautomat $A^\equiv$ zu $A$ akzeptiert dieselbe Sprache wie $A$.
     \end{satz}
 
     \begin{satz}
@@ -560,8 +560,8 @@
     \end{defi}
 
 
-    \subsection{Pseudopolynomielle Algorithmen
-	}\label{subsec:pseudopolynomielle-algorithmen}
+    \subsection{Pseudopolynomielle Algorithmen}
+    \label{subsec:pseudopolynomielle-algorithmen}
 
     \begin{defi}[Pseudopolynomiell]
         Sei $\Pi$ ein Optimierungsproblem.
